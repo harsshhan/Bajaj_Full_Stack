@@ -1,4 +1,7 @@
-const API_URL = "http://localhost:3000/bfhl";
+// Change 'your-backend-url' to your actual Vercel backend URL after deploying the backend
+const API_URL = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1" 
+  ? "http://localhost:3000/bfhl" 
+  : "https://your-backend-url.vercel.app/bfhl";
 
 function submitData() {
   const input = document.getElementById("inputData").value;
